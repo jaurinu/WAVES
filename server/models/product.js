@@ -19,6 +19,8 @@ const productSchema = mongoose.Schema({
         maxlength:255
     },
     brand:{
+        //traemos el id de la marca y ref, es la referencia
+        //de la coleccion 
         type: Schema.Types.ObjectId,
         ref: 'Brand',
         required: true,
@@ -46,6 +48,8 @@ const productSchema = mongoose.Schema({
         default: 0 
     },
     publish:{
+        //publish es tipo boolean para determinar si 
+        //se despliega la publicacion o no, falso, verdadero
         required: true,
         type: Boolean
     },
